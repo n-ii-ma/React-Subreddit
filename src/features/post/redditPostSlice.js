@@ -1,11 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const getPosts = createAsyncThunk("post/getPosts", async () => {
-  const response = await fetch("https://www.reddit.com/r/SelenaGomez.json");
-  if (!response.ok) throw new Error("Request Failed!");
-  const data = await response.json();
-  return data;
-});
+export const getPosts = createAsyncThunk(
+  "post/getPosts",
+  async (apiAddress) => {
+    const response = await fetch(apiAddress);
+    if (!response.ok) throw new Error("Request Failed!");
+    const data = await response.json();
+    return data;
+  }
+);
 
 const redditPostSlice = createSlice({
   name: "post",

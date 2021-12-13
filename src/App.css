@@ -4,8 +4,11 @@
 }
 
 body {
-  background: #55d6f4;
-  color: #313e48;
+  background-image: url("./assets/pexels-adrien-olichon-2387793.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,18 +18,26 @@ body {
 
 h1 {
   font-family: Montserrat;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 1em;
-  color: rgb(251, 255, 0);
+  color: white;
   margin-bottom: 1.25em;
-  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
   padding: 0 0.25em;
 }
 
-button {
-  margin-bottom: 2em;
+.search-label {
+  font-family: Quicksand;
+  font-size: 1.75rem;
+  color: rgb(253, 51, 0);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.search-input,
+.search-btn {
+  margin-bottom: 1em;
   align-items: center;
   background-color: #fff;
   border-radius: 20px;
@@ -36,6 +47,7 @@ button {
   display: inline-flex;
   font-family: Quicksand;
   font-size: 1rem;
+  height: 48px;
   justify-content: center;
   letter-spacing: 0.25px;
   max-width: 100%;
@@ -44,6 +56,10 @@ button {
   position: relative;
   text-align: center;
   width: auto;
+}
+
+.search-btn {
+  margin-bottom: 2em;
   cursor: pointer;
   height: 40px;
 }
@@ -167,7 +183,7 @@ button:disabled {
   font-family: Quicksand;
 }
 
-.image {
+.images {
   width: 600px;
   height: auto;
   object-fit: contain;
@@ -176,28 +192,49 @@ button:disabled {
 .gallery {
   overflow: auto;
   white-space: nowrap;
+}
+
+.gallery-images {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
   margin: 0.5em;
 }
 
-.video {
+.videos {
   width: 600px;
   height: auto;
   object-fit: contain;
 }
 
 @media only screen and (max-width: 720px) {
-  .box {
-    padding: 1em;
-    max-width: 350px;
+  h1 {
+    font-family: Montserrat;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 1em;
+    color: white;
+    margin-bottom: 1.25em;
+    letter-spacing: 1px;
+    padding: 0 0.5em;
   }
 
-  .image {
-    width: 300px;
+  .box {
+    padding: 0.75em;
+    max-width: 310px;
+  }
+
+  .images {
+    width: 275px;
     min-height: auto;
   }
 
-  .video {
-    width: 300px;
+  .gallery-images {
+    width: 275px;
+  }
+
+  .videos {
+    width: 275px;
     min-height: auto;
   }
 }

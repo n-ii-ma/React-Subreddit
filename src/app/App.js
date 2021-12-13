@@ -1,12 +1,12 @@
-import Button from "../components/Button";
+import Search from "../components/Search";
 import PostList from "../components/PostList";
 import "../App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Selena Gomez Subreddit</h1>
-      <Button />
+      <h1>Get the Hot Posts from Your Favorite Subreddits</h1>
+      <Search />
       <PostList />
     </div>
   );
