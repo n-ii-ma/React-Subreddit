@@ -167,7 +167,19 @@ button:disabled {
   font-family: Quicksand;
 }
 
-img {
+.image {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery {
+  overflow: auto;
+  white-space: nowrap;
+  margin: 0.5em;
+}
+
+.video {
   width: 600px;
   height: auto;
   object-fit: contain;
@@ -179,7 +191,12 @@ img {
     max-width: 350px;
   }
 
-  img {
+  .image {
+    width: 300px;
+    min-height: auto;
+  }
+
+  .video {
     width: 300px;
     min-height: auto;
   }
