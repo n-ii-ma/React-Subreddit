@@ -1,38 +1,186 @@
-.App {
+* {
   text-align: center;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: #55d6f4;
+  color: #313e48;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-family: Montserrat;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-top: 1em;
+  color: rgb(251, 255, 0);
+  margin-bottom: 1.25em;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  padding: 0 0.25em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  margin-bottom: 2em;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  color: #3c4043;
+  display: inline-flex;
+  font-family: Quicksand;
+  font-size: 1rem;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  height: 40px;
+}
+
+button:hover {
+  background: #114399;
+  color: #ffffff;
+}
+
+button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid #ff009d;
+}
+
+button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+button:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: rgb(255, 0, 128);
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: rgb(255, 0, 128);
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
   }
-  to {
-    transform: rotate(360deg);
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.error {
+  font-family: Quicksand;
+  color: rgb(212, 0, 255);
+  margin-top: 1em;
+  font-size: 1.25rem;
+}
+
+.box {
+  margin: 1em auto;
+  background: #f0f0f0;
+  padding: 1em;
+  max-width: 700px;
+  min-height: 200px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+.upvotes {
+  font-size: 1em;
+  text-align: left;
+  font-family: Quicksand;
+  color: #ff3c00;
+}
+
+.author {
+  font-size: 1em;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: rgb(0, 132, 255);
+}
+
+.title {
+  font-size: 1.25em;
+  text-align: center;
+  font-family: Quicksand;
+}
+
+img {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 720px) {
+  .box {
+    padding: 1em;
+    max-width: 350px;
+  }
+
+  img {
+    width: 300px;
+    min-height: auto;
   }
 }
