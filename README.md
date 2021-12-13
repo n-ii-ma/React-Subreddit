@@ -2,9 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## NOTICE
-NOT FINAL.
-
 ## Address
 https://selena-subreddit.netlify.app/
 
