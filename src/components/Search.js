@@ -49,7 +49,7 @@ const Search = () => {
         Hot Posts
       </button>
       <button type="submit" onClick={handleTop} className="search-btn">
-        Top Posts
+        Top Posts Today
       </button>
       <button type="submit" onClick={handleNew} className="search-btn">
         New Posts
