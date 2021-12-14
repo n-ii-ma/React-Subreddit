@@ -193,6 +193,7 @@ button:disabled {
 
 .title {
   font-size: 1.2em;
+  width: 250px;
   justify-self: start;
   grid-area: 2 / 2;
   text-align: left;
@@ -272,12 +273,21 @@ footer {
     margin-top: 0;
   }
 
+  .title {
+    width: 300px;
+  }
+
   .images {
     width: 300px;
   }
 
   .comments {
     margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .gallery {
+    width: 300px;
   }
 
   .gallery-images {
@@ -297,7 +307,7 @@ footer {
   }
 
   .search-label {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .search-input,
@@ -311,12 +321,12 @@ footer {
 
   .box {
     padding: 1em;
-    min-width: 600px;
+    min-width: 500px;
     gap: 1em;
   }
 
   .upvotes {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   .author {
@@ -325,27 +335,169 @@ footer {
   }
 
   .title {
-    font-size: 1.75em;
+    font-size: 1.5em;
+    width: 350px;
   }
 
   .flair {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .images {
-    width: 500px;
+    width: 350px;
   }
 
   .comments {
     font-size: 1em;
     margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .gallery {
+    width: 350px;
   }
 
   .gallery-images {
-    width: 500px;
+    width: 350px;
   }
 
   .videos {
-    width: 500px;
+    width: 350px;
+  }
+}
+
+/* Landscape Tablet */
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 0 1em;
+    margin-top: 1.5em;
+  }
+
+  .search-label {
+    font-size: 1.75rem;
+  }
+
+  .search-input,
+  .search-btn {
+    font-size: 1.25rem;
+  }
+
+  .search-btn {
+    height: 43px;
+  }
+
+  .box {
+    padding: 1em;
+    min-width: 500px;
+    gap: 1em;
+  }
+
+  .upvotes {
+    font-size: 1.25em;
+  }
+
+  .author {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 1.5em;
+    width: 350px;
+  }
+
+  .flair {
+    font-size: 1.25rem;
+  }
+
+  .images {
+    width: 350px;
+  }
+
+  .comments {
+    font-size: 1em;
+    margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .gallery {
+    width: 350px;
+  }
+
+  .gallery-images {
+    width: 350px;
+  }
+
+  .videos {
+    width: 350px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin-top: 2em;
+  }
+
+  .search-label {
+    font-size: 1.75rem;
+  }
+
+  .search-input,
+  .search-btn {
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    height: 40px;
+  }
+
+  .box {
+    padding: 1em;
+    min-width: 600px;
+    gap: 1em;
+  }
+
+  .upvotes {
+    font-size: 1.25em;
+  }
+
+  .author {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 1.5em;
+    width: 450px;
+  }
+
+  .flair {
+    font-size: 1.25rem;
+  }
+
+  .images {
+    width: 450px;
+  }
+
+  .comments {
+    font-size: 1em;
+    margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .gallery {
+    width: 450px;
+  }
+
+  .gallery-images {
+    width: 450px;
+  }
+
+  .videos {
+    width: 450px;
   }
 }
