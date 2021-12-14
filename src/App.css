@@ -20,18 +20,18 @@ body {
 
 h1 {
   font-family: Montserrat;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-top: 1em;
   color: white;
   margin-bottom: 1.25em;
   letter-spacing: 1px;
-  padding: 0 0.25em;
+  padding: 0 0.5em;
 }
 
 .search-label {
   font-family: Quicksand;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: rgb(253, 51, 0);
   display: block;
   margin-bottom: 0.5em;
@@ -161,16 +161,17 @@ button:disabled {
   grid-template-rows: 1fr 1fr minmax(max-content) 1fr;
   margin: 1em auto;
   background: #f0f0f0;
-  padding: 1em;
-  max-width: 700px;
+  padding: 0.5em;
+  min-width: 310px;
+  max-width: 0;
   min-height: auto;
   border-radius: 3px;
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .upvotes {
-  font-size: 1.25em;
+  font-size: 1em;
   grid-area: 1 / 1 / 5 / 1;
   text-align: center;
   align-self: center;
@@ -179,18 +180,19 @@ button:disabled {
 }
 
 .author {
-  font-size: 1em;
+  font-size: 0.75em;
   justify-self: start;
   grid-area: 1 / 2;
   text-align: left;
   font-family: Montserrat;
   font-weight: 600;
   margin-bottom: 1em;
+  margin-top: 0.5em;
   color: rgb(0, 132, 255);
 }
 
 .title {
-  font-size: 1.25em;
+  font-size: 1.2em;
   justify-self: start;
   grid-area: 2 / 2;
   text-align: left;
@@ -208,22 +210,23 @@ button:disabled {
 }
 
 .images {
-  width: 600px;
+  width: 250px;
   grid-area: 3 / 2;
-  height: auto;
+  min-height: auto;
   object-fit: contain;
   border-radius: 3px;
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
 }
 
 .comments {
-  font-size: 1em;
+  font-size: 0.75em;
   justify-self: start;
   grid-area: 4 / 2;
   text-align: left;
   font-family: Montserrat;
   font-weight: 600;
   color: rgb(43, 161, 43);
+  margin: 0.5em 0;
 }
 
 .gallery {
@@ -233,7 +236,7 @@ button:disabled {
 }
 
 .gallery-images {
-  width: 600px;
+  width: 250px;
   height: auto;
   object-fit: contain;
   margin-right: 0.5em;
@@ -242,8 +245,8 @@ button:disabled {
 }
 
 .videos {
-  width: 600px;
-  height: auto;
+  width: 250px;
+  min-height: auto;
   grid-area: 3 / 2;
   object-fit: contain;
   border-radius: 3px;
@@ -257,58 +260,92 @@ footer {
   margin-top: 1em;
 }
 
-@media only screen and (max-width: 720px) {
-  h1 {
-    font-family: Montserrat;
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-top: 1em;
-    color: white;
-    margin-bottom: 1.25em;
-    letter-spacing: 1px;
-    padding: 0 0.5em;
-  }
-
-  .upvotes {
-    font-size: 1em;
-  }
-
-  .title {
-    font-size: 1.2em;
-    justify-self: start;
-    grid-area: 2 / 2;
-    text-align: left;
-    font-family: Quicksand;
-  }
-
+/* Landscape Mobile */
+@media only screen and (min-width: 320px) and (orientation: landscape) {
   .box {
-    max-width: 0;
-    padding: 0.5em;
-    min-width: 310px;
-    gap: 0.5em;
+    padding: 1em;
+    min-width: 400px;
+    gap: 1em;
   }
 
   .author {
-    margin-top: 0.5em;
-    font-size: 0.75em;
-  }
-
-  .comments {
-    margin: 0.5em 0;
-    font-size: 0.75em;
+    margin-top: 0;
   }
 
   .images {
-    width: 250px;
-    min-height: auto;
+    width: 300px;
+  }
+
+  .comments {
+    margin: 0;
   }
 
   .gallery-images {
-    width: 250px;
+    width: 300px;
   }
 
   .videos {
-    width: 250px;
-    min-height: auto;
+    width: 300px;
+  }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1.5em;
+  }
+
+  .search-label {
+    font-size: 2rem;
+  }
+
+  .search-input,
+  .search-btn {
+    font-size: 1.25rem;
+  }
+
+  .search-btn {
+    height: 43px;
+  }
+
+  .box {
+    padding: 1em;
+    min-width: 600px;
+    gap: 1em;
+  }
+
+  .upvotes {
+    font-size: 1.5em;
+  }
+
+  .author {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 1.75em;
+  }
+
+  .flair {
+    font-size: 1.5rem;
+  }
+
+  .images {
+    width: 500px;
+  }
+
+  .comments {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .gallery-images {
+    width: 500px;
+  }
+
+  .videos {
+    width: 500px;
   }
 }
