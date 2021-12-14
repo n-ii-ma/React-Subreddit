@@ -6,17 +6,33 @@ const Search = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
 
-  const apiAddress = `https://www.reddit.com/r/${input}.json`;
+  const hotApiAddress = `https://www.reddit.com/r/${input}/hot.json`;
+  const topApiAddress = `https://www.reddit.com/r/${input}/top.json`;
+  const newApiAddress = `https://www.reddit.com/r/${input}/new.json`;
 
-  const handleSearch = (e) => {
+  const handleHot = (e) => {
     e.preventDefault();
     if (!input) return;
 
-    dispatch(getPosts(apiAddress));
+    dispatch(getPosts(hotApiAddress));
+  };
+
+  const handleTop = (e) => {
+    e.preventDefault();
+    if (!input) return;
+
+    dispatch(getPosts(topApiAddress));
+  };
+
+  const handleNew = (e) => {
+    e.preventDefault();
+    if (!input) return;
+
+    dispatch(getPosts(newApiAddress));
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form>
       <label htmlFor="search" className="search-label">
         Search Subreddits
       </label>
@@ -29,8 +45,14 @@ const Search = () => {
         required
       />
       <br />
-      <button type="submit" className="search-btn">
-        Search
+      <button type="submit" onClick={handleHot} className="search-btn">
+        Hot Posts
+      </button>
+      <button type="submit" onClick={handleTop} className="search-btn">
+        Top Posts
+      </button>
+      <button type="submit" onClick={handleNew} className="search-btn">
+        New Posts
       </button>
     </form>
   );

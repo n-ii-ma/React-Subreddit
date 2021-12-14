@@ -59,6 +59,7 @@ h1 {
 }
 
 .search-btn {
+  margin: 0 1em;
   margin-bottom: 2em;
   cursor: pointer;
   height: 40px;
