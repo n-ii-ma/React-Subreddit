@@ -154,58 +154,98 @@ button:disabled {
 }
 
 .box {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 1fr 1fr minmax(max-content) 1fr;
   margin: 1em auto;
   background: #f0f0f0;
   padding: 1em;
   max-width: 700px;
-  min-height: 200px;
+  min-height: auto;
   border-radius: 3px;
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+  gap: 1em;
 }
 
 .upvotes {
-  font-size: 1em;
-  text-align: left;
+  font-size: 1.25em;
+  grid-area: 1 / 1 / 5 / 1;
+  text-align: center;
+  align-self: center;
   font-family: Quicksand;
   color: #ff3c00;
 }
 
 .author {
   font-size: 1em;
+  justify-self: start;
+  grid-area: 1 / 2;
   text-align: left;
   font-family: Montserrat;
   font-weight: 600;
+  margin-bottom: 1em;
   color: rgb(0, 132, 255);
 }
 
 .title {
   font-size: 1.25em;
-  text-align: center;
+  justify-self: start;
+  grid-area: 2 / 2;
+  text-align: left;
   font-family: Quicksand;
+}
+
+.flair{
+  background-color: Red;
+  font-family: Montserrat;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 0 7px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
 }
 
 .images {
   width: 600px;
+  grid-area: 3 / 2;
   height: auto;
   object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+.comments {
+  font-size: 1em;
+  justify-self: start;
+  grid-area: 4 / 2;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: rgb(43, 161, 43);
 }
 
 .gallery {
   overflow: auto;
   white-space: nowrap;
+  grid-area: 3 / 2;
 }
 
 .gallery-images {
   width: 600px;
   height: auto;
   object-fit: contain;
-  margin: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
 }
 
 .videos {
   width: 600px;
   height: auto;
+  grid-area: 3 / 2;
   object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
 }
 
 @media only screen and (max-width: 720px) {
@@ -220,22 +260,46 @@ button:disabled {
     padding: 0 0.5em;
   }
 
+  .upvotes {
+    font-size: 1em;
+  }
+
+  .title {
+    font-size: 1.2em;
+    justify-self: start;
+    grid-area: 2 / 2;
+    text-align: left;
+    font-family: Quicksand;
+  }
+
   .box {
-    padding: 0.75em;
-    max-width: 310px;
+    max-width: 0;
+    padding: 0.5em;
+    min-width: 310px;
+    gap: 0.5em;
+  }
+
+  .author {
+    margin-top: 0.5em;
+    font-size: 0.75em;
+  }
+
+  .comments {
+    margin: 0.5em 0;
+    font-size: 0.75em;
   }
 
   .images {
-    width: 275px;
+    width: 250px;
     min-height: auto;
   }
 
   .gallery-images {
-    width: 275px;
+    width: 250px;
   }
 
   .videos {
-    width: 275px;
+    width: 250px;
     min-height: auto;
   }
 }

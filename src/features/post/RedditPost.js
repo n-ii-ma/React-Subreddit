@@ -1,9 +1,16 @@
 const RedditPost = ({ post }) => {
   return (
     <div className="box">
-      <p className="upvotes">{post.ups} Upvotes</p>
-      <p className="author">u/{post.author}</p>
-      <p className="title">{post.title}</p>
+      <p className="upvotes">{post.ups}</p>
+      <p className="author">Posted by u/{post.author}</p>
+      <p className="title">
+        {post.link_flair_text ? (
+          <span className="flair">{post.link_flair_text}</span>
+        ) : (
+          ""
+        )}{" "}
+        {post.title}
+      </p>
       {post.url.endsWith(".jpg") ||
       post.url.endsWith(".gif") ||
       post.url.endsWith(".png") ? (
@@ -31,6 +38,11 @@ const RedditPost = ({ post }) => {
       ) : (
         ""
       )}
+      <p className="comments">
+        {post.num_comments > 1
+          ? `${post.num_comments} Comments`
+          : `${post.num_comments} Comment`}
+      </p>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import Search from "../components/Search";
 import PostList from "../components/PostList";
+import "../reset.css";
 import "../App.css";
 
 function App() {
