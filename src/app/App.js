@@ -14,7 +14,7 @@ function App() {
         <PostList />
       </div>
       <div>
-        <footer>&copy; All Rights Reserved</footer>
+        <footer>&copy; Reddix</footer>
       </div>
     </div>
   );
