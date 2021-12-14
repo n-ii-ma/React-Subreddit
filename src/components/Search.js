@@ -7,7 +7,6 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const hotApiAddress = `https://www.reddit.com/r/${input}/hot.json`;
-  const topApiAddress = `https://www.reddit.com/r/${input}/top.json`;
   const newApiAddress = `https://www.reddit.com/r/${input}/new.json`;
 
   const handleHot = (e) => {
@@ -15,13 +14,6 @@ const Search = () => {
     if (!input) return;
 
     dispatch(getPosts(hotApiAddress));
-  };
-
-  const handleTop = (e) => {
-    e.preventDefault();
-    if (!input) return;
-
-    dispatch(getPosts(topApiAddress));
   };
 
   const handleNew = (e) => {
@@ -47,9 +39,6 @@ const Search = () => {
       <br />
       <button type="submit" onClick={handleHot} className="search-btn">
         Hot Posts
-      </button>
-      <button type="submit" onClick={handleTop} className="search-btn">
-        Top Posts Today
       </button>
       <button type="submit" onClick={handleNew} className="search-btn">
         New Posts
