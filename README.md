@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Address
-https://selena-subreddit.netlify.app/
+https://react-subreddit.netlify.app/
 
 ## Available Scripts
 
