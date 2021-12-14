@@ -11,6 +11,15 @@ const RedditPost = ({ post }) => {
       ) : (
         ""
       )}
+{/*       {post.media.type === "gfycat.com" ? (
+        <img
+          src={post.media.oembed.thumbnail_url}
+          className="images"
+          alt="Subreddit Images"
+        />
+      ) : (
+        ""
+      )} */}
       <div className="gallery">
         {post.is_gallery
           ? post.gallery_data.items.map((item) => (
