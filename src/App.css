@@ -201,7 +201,7 @@ button:disabled {
   font-weight: 600;
   margin-bottom: 1em;
   margin-top: 0.5em;
-  color: rgb(0, 132, 255);
+  color: rgb(107, 107, 107);
 }
 
 .title {
@@ -239,7 +239,7 @@ button:disabled {
   text-align: left;
   font-family: Montserrat;
   font-weight: 600;
-  color: rgb(43, 161, 43);
+  color: rgb(255, 0, 140);
   margin: 0.5em 0;
 }
 

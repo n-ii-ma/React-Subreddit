@@ -56,6 +56,11 @@ const RedditPost = ({ post }) => {
         ""
       )}
       <p className="comments">
+        {post.num_comments > 1 ? (
+          <i class="fas fa-comments"></i>
+        ) : (
+          <i class="fas fa-comment"></i>
+        )}{" "}
         {post.num_comments > 1
           ? `${post.num_comments} Comments`
           : `${post.num_comments} Comment`}
