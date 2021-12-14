@@ -5,10 +5,17 @@ import "../App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Get All the Posts from Your Favorite Subreddits</h1>
-      <Search />
-      <PostList />
+    <div className="container">
+      <div>
+        <header>
+          <h1>Get All the Posts from Your Favorite Subreddits</h1>
+        </header>
+        <Search />
+        <PostList />
+      </div>
+      <div>
+        <footer>&copy; All Rights Reserved</footer>
+      </div>
     </div>
   );
 }

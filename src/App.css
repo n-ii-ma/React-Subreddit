@@ -1,5 +1,4 @@
 * {
-  text-align: center;
   box-sizing: border-box;
 }
 
@@ -8,12 +7,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: black;
+}
+
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
 h1 {
@@ -195,7 +197,7 @@ button:disabled {
   font-family: Quicksand;
 }
 
-.flair{
+.flair {
   background-color: Red;
   font-family: Montserrat;
   color: white;
@@ -246,6 +248,13 @@ button:disabled {
   object-fit: contain;
   border-radius: 3px;
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  font-family: Montserrat;
+  color: white;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 720px) {
