@@ -171,7 +171,7 @@ button:disabled {
   margin: 1em auto;
   background: #f0f0f0;
   padding: 0.5em;
-  min-width: 310px;
+  min-width: 320px;
   max-width: 0;
   min-height: auto;
   border-radius: 3px;
