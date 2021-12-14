@@ -1,7 +1,24 @@
 const RedditPost = ({ post }) => {
+  // Converts Number to string Representation with K and M
+  const formatNumber = (num) => {
+    if (num > 999 && num < 1000000) {
+      return (num / 1000).toFixed(1) + "K";
+    } else if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + "M";
+    } else if (num <= 999) {
+      return num;
+    }
+  };
+
   return (
     <div className="box">
-      <p className="upvotes">{post.ups}</p>
+      <p className="upvotes">
+        <i className="fas fa-angle-double-up arrow"></i>
+        <br />
+        {formatNumber(post.ups)}
+        <br />
+        <i className="fas fa-angle-double-down arrow"></i>
+      </p>
       <p className="author">Posted by u/{post.author}</p>
       <p className="title">
         {post.link_flair_text ? (

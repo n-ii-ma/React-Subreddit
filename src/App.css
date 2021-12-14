@@ -185,7 +185,11 @@ button:disabled {
   text-align: center;
   align-self: center;
   font-family: Quicksand;
-  color: #ff3c00;
+  color: rgb(255, 51, 0);
+}
+
+.arrow {
+  color: black;
 }
 
 .author {
