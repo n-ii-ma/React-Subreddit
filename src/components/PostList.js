@@ -16,9 +16,9 @@ const PostList = () => {
 
   return (
     <div>
-      {!redditPost
+      {!redditPost.children
         ? ""
-        : redditPost.map((post) => (
+        : redditPost.children.map((post) => (
             <RedditPost post={post.data} key={post.data.id} />
           ))}
     </div>

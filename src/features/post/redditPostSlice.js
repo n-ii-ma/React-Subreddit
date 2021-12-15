@@ -1,7 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// Gets 10 Posts from the API
 export const getPosts = createAsyncThunk(
   "post/getPosts",
+  async (apiAddress) => {
+    const response = await fetch(apiAddress);
+    if (!response.ok) throw new Error("Request Failed!");
+    const data = await response.json();
+    return data;
+  }
+);
+
+// Loads the Next 10 Posts
+export const getMorePosts = createAsyncThunk(
+  "post/getMorePosts",
   async (apiAddress) => {
     const response = await fetch(apiAddress);
     if (!response.ok) throw new Error("Request Failed!");
@@ -13,9 +25,11 @@ export const getPosts = createAsyncThunk(
 const redditPostSlice = createSlice({
   name: "post",
   initialState: {
-    redditPost: [],
+    redditPost: {},
     isLoading: false,
     hasError: false,
+    moreIsLoading: false,
+    moreHasError: false,
   },
   extraReducers: (builder) => {
     builder
@@ -24,13 +38,26 @@ const redditPostSlice = createSlice({
         state.hasError = false;
       })
       .addCase(getPosts.fulfilled, (state, action) => {
-        state.redditPost = action.payload.data.children;
+        state.redditPost = action.payload.data;
         state.isLoading = false;
         state.hasError = false;
       })
       .addCase(getPosts.rejected, (state) => {
         state.isLoading = false;
         state.hasError = true;
+      })
+      .addCase(getMorePosts.pending, (state) => {
+        state.moreIsLoading = true;
+        state.moreHasError = false;
+      })
+      .addCase(getMorePosts.fulfilled, (state, action) => {
+        state.redditPost = action.payload.data;
+        state.moreIsLoading = false;
+        state.moreHasError = false;
+      })
+      .addCase(getMorePosts.rejected, (state) => {
+        state.moreIsLoading = false;
+        state.moreHasError = true;
       });
   },
 });
@@ -39,6 +66,7 @@ const redditPostSlice = createSlice({
 export const selectRedditPost = (state) => state.post.redditPost;
 export const selectPostIsLoading = (state) => state.post.isLoading;
 export const selectPostHasError = (state) => state.post.hasError;
+export const selectMorePostIsLoading = (state) => state.post.moreIsLoading;
 
 // Reducer
 export default redditPostSlice.reducer;
