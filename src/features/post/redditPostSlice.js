@@ -66,7 +66,6 @@ const redditPostSlice = createSlice({
 export const selectRedditPost = (state) => state.post.redditPost;
 export const selectPostIsLoading = (state) => state.post.isLoading;
 export const selectPostHasError = (state) => state.post.hasError;
-export const selectMorePostIsLoading = (state) => state.post.moreIsLoading;
 
 // Reducer
 export default redditPostSlice.reducer;

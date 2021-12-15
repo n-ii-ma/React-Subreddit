@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
 import RedditPost from "../features/post/RedditPost";
-import { selectRedditPost } from "../features/post/redditPostSlice";
-import { selectPostIsLoading } from "../features/post/redditPostSlice";
-import { selectPostHasError } from "../features/post/redditPostSlice";
+import {
+  selectRedditPost,
+  selectPostIsLoading,
+  selectPostHasError,
+} from "../features/post/redditPostSlice";
 import IsLoading from "./IsLoading";
 import HasError from "./HasError";
 
