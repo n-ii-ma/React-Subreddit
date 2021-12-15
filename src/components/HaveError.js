@@ -1,4 +1,4 @@
-const HasError = () => {
+const HaveError = () => {
   return (
     <div>
       <p className="error">Couldn't Reach Reddit Servers!<br />Please Try Again</p>
@@ -7,4 +7,4 @@ const HasError = () => {
   );
 };
 
-export default HasError;
+export default HaveError;

@@ -4,19 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getPosts,
   getMorePosts,
-  selectRedditPost,
+  selectRedditPosts,
 } from "../features/post/redditPostSlice";
 
 const Search = () => {
   const [input, setInput] = useState("");
   const [isFetching, setIsFetching] = useState(false);
-  const redditPost = useSelector(selectRedditPost);
+  const redditPosts = useSelector(selectRedditPosts);
   const dispatch = useDispatch();
 
   // Get the Last Post
   const lastPost = () => {
-    if (redditPost.children) {
-      const [lastItem] = redditPost.children.slice(-1);
+    if (redditPosts.children) {
+      const [lastItem] = redditPosts.children.slice(-1);
 
       const lastKind = lastItem.kind;
       const lastId = lastItem.data.id;

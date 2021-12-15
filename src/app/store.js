@@ -3,7 +3,7 @@ import postReducer from "../features/post/redditPostSlice";
 
 const store = configureStore({
   reducer: {
-    post: postReducer,
+    posts: postReducer,
   },
 });
 

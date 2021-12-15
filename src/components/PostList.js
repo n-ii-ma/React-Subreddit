@@ -1,27 +1,27 @@
 import { useSelector } from "react-redux";
 import RedditPost from "../features/post/RedditPost";
 import {
-  selectRedditPost,
-  selectPostIsLoading,
-  selectPostHasError,
+  selectRedditPosts,
+  selectPostsAreLoading,
+  selectPostsHaveError,
 } from "../features/post/redditPostSlice";
-import IsLoading from "./IsLoading";
-import HasError from "./HasError";
+import AreLoading from "./AreLoading";
+import HaveError from "./HaveError";
 
 const PostList = () => {
-  const redditPost = useSelector(selectRedditPost);
-  const postIsLoading = useSelector(selectPostIsLoading);
-  const postHasError = useSelector(selectPostHasError);
+  const redditPosts = useSelector(selectRedditPosts);
+  const postsAreLoading = useSelector(selectPostsAreLoading);
+  const postsHaveError = useSelector(selectPostsHaveError);
 
   // Show Loading and Error Components when Post is Loading or has Error, repectively
-  if (postIsLoading) return <IsLoading />;
-  if (postHasError) return <HasError />;
+  if (postsAreLoading) return <AreLoading />;
+  if (postsHaveError) return <HaveError />;
 
   return (
     <div>
-      {!redditPost.children
+      {!redditPosts.children
         ? ""
-        : redditPost.children.map((post) => (
+        : redditPosts.children.map((post) => (
             <RedditPost post={post.data} key={post.data.id} />
           ))}
     </div>

@@ -1,4 +1,4 @@
-const IsLoading = () => {
+const AreLoading = () => {
   return (
     <div className="lds-heart">
       <div></div>
@@ -6,4 +6,4 @@ const IsLoading = () => {
   );
 };
 
-export default IsLoading;
+export default AreLoading;
