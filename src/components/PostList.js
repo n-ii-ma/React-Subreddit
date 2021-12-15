@@ -11,6 +11,7 @@ const PostList = () => {
   const postIsLoading = useSelector(selectPostIsLoading);
   const postHasError = useSelector(selectPostHasError);
 
+  // Show Loading and Error Components when Post is Loading or has Error, repectively
   if (postIsLoading) return <IsLoading />;
   if (postHasError) return <HasError />;
 

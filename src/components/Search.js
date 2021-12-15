@@ -48,6 +48,7 @@ const Search = () => {
     dispatch(getPosts(newApiAddress));
   };
 
+  // Fire Upon Reaching the Bottom of the Page
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop !==
@@ -58,6 +59,7 @@ const Search = () => {
     setIsFetching(true);
   };
 
+  // Debounce the Scroll Event Function and Cancel it When Called
   const debounceHandleScroll = debounce(handleScroll, 100);
 
   useEffect(() => {
@@ -67,6 +69,7 @@ const Search = () => {
 
   debounceHandleScroll.cancel();
 
+  // Get More Posts
   const loadMoreItems = useCallback(() => {
     dispatch(getMorePosts(moreApiAddress));
     setIsFetching(false);
