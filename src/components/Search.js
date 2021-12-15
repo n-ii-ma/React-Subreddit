@@ -28,24 +28,15 @@ const Search = () => {
   };
 
   // API Endpoints
-  const hotApiAddress = `https://www.reddit.com/r/${input}/hot.json?limit=10`;
-  const newApiAddress = `https://www.reddit.com/r/${input}/new.json?limit=10`;
-  const moreApiAddress = `https://www.reddit.com/r/${input}/new.json?limit=10&after=${lastPost()}`;
+  const apiAddress = `https://www.reddit.com/r/${input}.json?limit=10`;
+  const moreApiAddress = `https://www.reddit.com/r/${input}.json?limit=10&after=${lastPost()}`;
 
   // Get Hot Posts
-  const handleHot = (e) => {
+  const handlePost = (e) => {
     e.preventDefault();
     if (!input) return;
 
-    dispatch(getPosts(hotApiAddress));
-  };
-
-  // Get New Posts
-  const handleNew = (e) => {
-    e.preventDefault();
-    if (!input) return;
-
-    dispatch(getPosts(newApiAddress));
+    dispatch(getPosts(apiAddress));
   };
 
   // Fire Upon Reaching the Bottom of the Page
@@ -81,7 +72,7 @@ const Search = () => {
   }, [isFetching, loadMoreItems]);
 
   return (
-    <form>
+    <form onSubmit={handlePost}>
       <label htmlFor="search" className="search-label">
         Search Subreddits
       </label>
@@ -94,11 +85,8 @@ const Search = () => {
         required
       />
       <br />
-      <button type="submit" onClick={handleHot} className="search-btn">
-        Hot Posts
-      </button>
-      <button type="submit" onClick={handleNew} className="search-btn">
-        New Posts
+      <button type="submit" className="search-btn">
+        Search
       </button>
     </form>
   );
