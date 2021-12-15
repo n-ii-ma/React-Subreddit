@@ -51,7 +51,14 @@ const redditPostSlice = createSlice({
         state.moreHasError = false;
       })
       .addCase(getMorePosts.fulfilled, (state, action) => {
-        state.redditPost = action.payload.data;
+        state.redditPost = {
+          ...state.redditPost,
+          after: action.payload.data.after,
+          children: [
+            ...state.redditPost.children,
+            ...action.payload.data.children,
+          ],
+        };
         state.moreIsLoading = false;
         state.moreHasError = false;
       })
