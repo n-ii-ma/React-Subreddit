@@ -51,7 +51,7 @@ const Search = () => {
   };
 
   // Debounce the Scroll Event Function and Cancel it When Called
-  const debounceHandleScroll = debounce(handleScroll, 300);
+  const debounceHandleScroll = debounce(handleScroll, 100);
 
   useEffect(() => {
     window.addEventListener("scroll", debounceHandleScroll);
