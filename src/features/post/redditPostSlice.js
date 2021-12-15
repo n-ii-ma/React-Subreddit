@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Gets 10 Posts from the API
+// Gets the First 10 Posts from the API
 export const getPosts = createAsyncThunk(
   "post/getPosts",
   async (apiAddress) => {
