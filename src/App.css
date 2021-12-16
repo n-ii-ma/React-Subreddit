@@ -318,8 +318,10 @@ button:focus {
   transition: all 0.25s ease-in-out;
 }
 
-#back-to-top:hover {
-  color: rgb(255, 0, 140);
+@media (hover: hover) {
+  #back-to-top:hover {
+    color: rgb(255, 0, 140);
+  }
 }
 
 #back-to-top.visible-button {
