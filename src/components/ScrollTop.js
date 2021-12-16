@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ScrollTop = () => {
   const [visible, setVisible] = useState(false);
@@ -16,7 +16,12 @@ const ScrollTop = () => {
   };
 
   // Listen for Scrolling Event
-  window.addEventListener("scroll", toggleVisible);
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisible, false);
+    return () => {
+      window.removeEventListener("scroll", toggleVisible, false);
+    };
+  }, []);
 
   // Get Back Top when Clicked
   const handleScroll = () => {
@@ -28,7 +33,7 @@ const ScrollTop = () => {
   return (
     <button
       id="back-to-top"
-      style={{ display: visible ? "block" : "none" }}
+      className={visible ? "visible-button" : ""}
       onClick={handleScroll}
       title="Go To Top"
     >

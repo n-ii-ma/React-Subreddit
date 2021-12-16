@@ -173,7 +173,7 @@ button:focus {
   text-align: center;
   align-self: center;
   font-family: Quicksand;
-  color: rgb(255, 51, 0);
+  color: rgb(255, 69, 0);
 }
 
 .arrow {
@@ -265,19 +265,19 @@ button:focus {
   position: fixed;
   bottom: 30px;
   right: 20px;
-  color: rgb(255, 51, 0);
+  color: rgb(255, 30, 0);
   z-index: 99;
   font-size: 2.5rem;
+  transform: scale(0);
+  transition: all 0.25s ease-in-out;
 }
 
 #back-to-top:hover {
   color: rgb(255, 0, 140);
 }
 
-@media (hover: hover) {
-  button:hover {
-    color: rgb(255, 51, 0);
-  }
+#back-to-top.visible-button {
+  transform: scale(1);
 }
 
 footer {
