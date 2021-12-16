@@ -3,6 +3,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("./assets/fonts/montserrat/montserrat-v18-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
     url("./assets/fonts/montserrat/montserrat-v18-latin-regular.eot?#iefix")
@@ -26,6 +27,7 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("./assets/fonts/quicksand/quicksand-v24-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
     url("./assets/fonts/quicksand/quicksand-v24-latin-regular.eot?#iefix")
