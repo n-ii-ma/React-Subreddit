@@ -42,17 +42,13 @@ const Search = () => {
   // Fire Upon Reaching the Bottom of the Page
   const handleScroll = () => {
     if (
-      window.innerHeight +
-        Math.max(
-          window.pageYOffset,
-          document.documentElement.scrollTop,
-          document.body.scrollTop
-        ) !==
-      document.documentElement.offsetHeight
-    )
+      document.documentElement.scrollTop + window.innerHeight >
+      document.documentElement.offsetHeight - 750
+    ) {
+      setIsFetching(true);
+    } else {
       return;
-
-    setIsFetching(true);
+    }
   };
 
   // Debounce the Scroll Event Function and Cancel it When Called
