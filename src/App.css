@@ -51,14 +51,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-image: url("./assets/pexels-adrien-olichon-2387793.jpg");
-  background-repeat: no-repeat;
+  background: url("./assets/images/Black-Sand-Dunes.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
+  scroll-behavior: smooth;
 }
 
 .container {
