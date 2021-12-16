@@ -42,7 +42,12 @@ const Search = () => {
   // Fire Upon Reaching the Bottom of the Page
   const handleScroll = () => {
     if (
-      window.innerHeight + document.documentElement.scrollTop !==
+      window.innerHeight +
+        Math.max(
+          window.pageYOffset,
+          document.documentElement.scrollTop,
+          document.body.scrollTop
+        ) !==
       document.documentElement.offsetHeight
     )
       return;

@@ -1,5 +1,6 @@
 import Search from "../components/Search";
 import PostList from "../components/PostList";
+import ScrollTop from "../components/ScrollTop";
 import "../reset.css";
 import "../App.css";
 
@@ -13,6 +14,7 @@ function App() {
         <Search />
         <PostList />
       </div>
+      <ScrollTop />
       <div>
         <footer>&copy; Reddix</footer>
       </div>

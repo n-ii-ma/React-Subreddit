@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("./assets/pexels-adrien-olichon-2387793.jpg");
   background-repeat: no-repeat;
@@ -72,25 +76,9 @@ button:hover {
   color: #ffffff;
 }
 
-button:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
-    0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
 button:focus {
   outline: none;
   border: 2px solid #ff009d;
-}
-
-button:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
-}
-
-button:disabled {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
 
 .lds-heart {
@@ -265,6 +253,31 @@ button:disabled {
   object-fit: contain;
   border-radius: 3px;
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+#back-to-top {
+  background: none;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  color: rgb(255, 51, 0);
+  z-index: 99;
+  font-size: 2.5rem;
+}
+
+#back-to-top:hover {
+  color: rgb(255, 0, 140);
+}
+
+@media (hover: hover) {
+  button:hover {
+    color: rgb(255, 51, 0);
+  }
 }
 
 footer {
