@@ -19,13 +19,15 @@ const ScrollTop = () => {
   // Debounce the Toggle Event Function
   const debounceToggleVisible = debounce(toggleVisible, 100);
 
-  // Listen for Scrolling Event
+  // Listen for Scrolling Event and Cancel Debounce
   useEffect(() => {
     window.addEventListener("scroll", debounceToggleVisible);
     return () => {
       window.removeEventListener("scroll", debounceToggleVisible);
     };
   }, [debounceToggleVisible]);
+
+  debounceToggleVisible.cancel();
 
   // Get Back Top when Clicked
   const handleScroll = () => {
