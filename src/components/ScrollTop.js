@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { debounce } from "lodash";
 
 const ScrollTop = () => {
   const [visible, setVisible] = useState(false);
@@ -15,13 +16,16 @@ const ScrollTop = () => {
     }
   };
 
+  // Debounce the Toggle Event Function
+  const debounceToggleVisible = debounce(toggleVisible, 100);
+
   // Listen for Scrolling Event
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
+    window.addEventListener("scroll", debounceToggleVisible);
     return () => {
-      window.removeEventListener("scroll", toggleVisible);
+      window.removeEventListener("scroll", debounceToggleVisible);
     };
-  }, []);
+  }, [debounceToggleVisible]);
 
   // Get Back Top when Clicked
   const handleScroll = () => {

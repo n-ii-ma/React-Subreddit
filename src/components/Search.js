@@ -42,8 +42,13 @@ const Search = () => {
   // Fire Upon Reaching the Bottom of the Page
   const handleScroll = () => {
     if (
-      document.documentElement.scrollTop + window.innerHeight >
-      document.documentElement.offsetHeight - 750
+      window.innerHeight +
+        Math.max(
+          window.pageYOffset,
+          document.documentElement.scrollTop,
+          document.body.scrollTop
+        ) >
+      document.documentElement.offsetHeight - 100
     ) {
       setIsFetching(true);
     } else {
