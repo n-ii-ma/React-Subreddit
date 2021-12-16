@@ -17,9 +17,9 @@ const ScrollTop = () => {
 
   // Listen for Scrolling Event
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible, false);
+    window.addEventListener("scroll", toggleVisible);
     return () => {
-      window.removeEventListener("scroll", toggleVisible, false);
+      window.removeEventListener("scroll", toggleVisible);
     };
   }, []);
 
