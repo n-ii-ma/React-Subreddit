@@ -34,8 +34,8 @@ Allows users to search the Reddit library for a corresponding subreddit and get 
 
 ## Screenshots
 <p float="left">
-  <img src="![image](https://user-images.githubusercontent.com/88039431/146406057-d5640483-6709-48e9-95fa-5878e6eec2cf.png)" width="300" />
-  <img src="![image](https://user-images.githubusercontent.com/88039431/146406263-4429f009-1194-4477-8de7-343c9cbcefeb.png)" width="500" /> 
+  <img src="https://user-images.githubusercontent.com/88039431/146406057-d5640483-6709-48e9-95fa-5878e6eec2cf.png" width="300" />
+  <img src="https://user-images.githubusercontent.com/88039431/146407081-fe94c72e-bac1-4d0e-8f97-a96d09324f96.png" width="500" /> 
 </p>
 
 ## Setup
