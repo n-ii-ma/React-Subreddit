@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const RedditPost = ({ post }) => {
   // Converts Number to string Representation with K and M
   const formatNumber = (num) => {
@@ -10,6 +12,12 @@ const RedditPost = ({ post }) => {
     }
   };
 
+  // Get the Time Since Content was Posted with Moment.js
+  const getDate = (date) => {
+    const dateTime = new Date(date * 1000);
+    return moment(dateTime).fromNow();
+  };
+
   return (
     <div className="box">
       <p className="upvotes">
@@ -19,7 +27,10 @@ const RedditPost = ({ post }) => {
         <br />
         <i className="fas fa-angle-double-down arrow"></i>
       </p>
-      <p className="author">Posted by u/{post.author}</p>
+      <p className="author">
+        <span className="posted-by">Posted by</span> u/{post.author}{" "}
+        <span className="date">{getDate(post.created_utc)}</span>
+      </p>
       <p className="title">
         {post.link_flair_text ? (
           <span className="flair">{post.link_flair_text}</span>

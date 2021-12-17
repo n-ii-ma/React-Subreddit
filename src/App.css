@@ -224,6 +224,11 @@ button:focus {
   color: black;
 }
 
+.posted-by,
+.date {
+  color: rgb(145, 145, 145);
+}
+
 .author {
   font-size: 0.75em;
   justify-self: start;
@@ -233,7 +238,8 @@ button:focus {
   font-weight: 600;
   margin-bottom: 1em;
   margin-top: 0.5em;
-  color: rgb(107, 107, 107);
+  color: rgb(100, 100, 100);
+  width: 250px;
 }
 
 .title {
@@ -406,6 +412,7 @@ footer {
 
   .author {
     margin-top: 0;
+    width: 300px;
   }
 
   .title {
@@ -475,6 +482,7 @@ footer {
   .author {
     font-size: 1em;
     margin-top: 0;
+    width: 350px;
   }
 
   .title {
@@ -555,6 +563,7 @@ footer {
   .author {
     font-size: 1em;
     margin-top: 0;
+    width: 350px;
   }
 
   .title {
@@ -635,6 +644,7 @@ footer {
   .author {
     font-size: 1em;
     margin-top: 0;
+    width: 450px;
   }
 
   .title {
