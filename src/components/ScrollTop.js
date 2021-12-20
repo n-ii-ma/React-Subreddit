@@ -16,7 +16,7 @@ const ScrollTop = () => {
     }
   };
 
-  // Debounce the Toggle Event Function
+  // Debounce the Toggle Event Function in 100ms
   const debounceToggleVisible = debounce(toggleVisible, 100);
 
   // Listen for Scrolling Event and Cancel Debounce
