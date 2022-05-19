@@ -8,10 +8,11 @@ A React/Redux app which let's clients search for their favorite subreddits and g
 + [General Info](#general-info)
 + [Address](#address)
 + [Technologies](#technologies)
-+ [Screenshots](#screenshots)
 + [Setup](#setup)
 + [Features](#features)
++ [Screenshots](#screenshots)
 + [Usage](#usage)
++ [License](#license)
 + [Contact](#contact)
 
 ## General Info
@@ -30,12 +31,6 @@ Project is created with:
 + npm v6.14.15
 + VSCode 1.63.1
 
-## Screenshots
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/88039431/146406057-d5640483-6709-48e9-95fa-5878e6eec2cf.png" width="300" />
-  <img src="https://user-images.githubusercontent.com/88039431/146407081-fe94c72e-bac1-4d0e-8f97-a96d09324f96.png" width="500" /> 
-</p>
-
 ## Setup
 
 ### Installation
@@ -50,8 +45,17 @@ $ npm start
 - Get the Hot posts of the searched subreddit
 - View the author's name, number of comments, and number of upvotes
 
+## Screenshots
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/88039431/146406057-d5640483-6709-48e9-95fa-5878e6eec2cf.png" width="300" />
+  <img src="https://user-images.githubusercontent.com/88039431/146407081-fe94c72e-bac1-4d0e-8f97-a96d09324f96.png" width="500" /> 
+</p>
+
 ## Usage
 Useful for getting the posts from a subreddit without the need to visit Reddit and load unnecessary content.
+
+## License
+Distributed under the [MIT](https://opensource.org/licenses/MIT) License.
 
 ## Contact
 Created by [n-ii-ma](https://github.com/n-ii-ma)
