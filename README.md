@@ -15,7 +15,7 @@ A React/Redux app which let's clients search for their favorite subreddits and g
 + [Contact](#contact)
 
 ## General Info
-This React/Redux app uses the Reddit JSON API to let clients search any subreddit's name and get their posts; including the author's username, number of upvotes and number of comments.
+This React/Redux app uses the Reddit JSON API to let clients search any subreddit's name and get their posts; including the author's username, number of upvotes, and number of comments.
 
 ## Address
 https://reddix.netlify.app/
