@@ -1,19 +1,21 @@
+[![MIT License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
+
 # Reddix
 
-An app which let's you search for your favorite subreddits and get their posts.
+A React/Redux app which let's clients search for their favorite subreddits and get their posts.
 
 ## Table of contents
 + [General Info](#general-info)
 + [Address](#address)
 + [Technologies](#technologies)
-+ [Features](#features)
 + [Screenshots](#screenshots)
 + [Setup](#setup)
++ [Features](#features)
 + [Usage](#usage)
 + [Contact](#contact)
 
 ## General Info
-This React-Redux app uses the Reddit JSON API to let you search any subreddit you want and get their posts; including the author, number of upvotes and number of comments.
+This React/Redux app uses the Reddit JSON API to let clients search any subreddit's name and get their posts; including the author's username, number of upvotes and number of comments.
 
 ## Address
 https://reddix.netlify.app/
@@ -28,9 +30,6 @@ Project is created with:
 + npm v6.14.15
 + VSCode 1.63.1
 
-## Features
-Allows users to search the Reddit library for a corresponding subreddit and get their posts.
-
 ## Screenshots
 <p float="left">
   <img src="https://user-images.githubusercontent.com/88039431/146406057-d5640483-6709-48e9-95fa-5878e6eec2cf.png" width="300" />
@@ -38,10 +37,21 @@ Allows users to search the Reddit library for a corresponding subreddit and get 
 </p>
 
 ## Setup
-Just search for your favorite subreddit and enjoy reading through all their amazing content.
+
+### Installation
+To run this project, install it locally using npm:
+```
+$ cd ../reddix
+$ npm install
+$ npm start
+```
+
+## Features
+- Get the Hot posts of the searched subreddit
+- View the author's name, number of comments, and number of upvotes
 
 ## Usage
-Useful for getting the posts from your favorite subreddit without the need to visit Reddit and load unnecessary content.
+Useful for getting the posts from a subreddit without the need to visit Reddit and load unnecessary content.
 
 ## Contact
 Created by [n-ii-ma](https://github.com/n-ii-ma)
